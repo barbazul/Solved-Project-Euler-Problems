@@ -11,11 +11,11 @@
 
 function factores($n) {
 
-        $p = 2;
+    $p = 2;
 	$factores = array();
 
 	while ($p * $p <= $n) {
-		if ($n % $p == 0) {
+		if (fmod($n, $p) == 0) {
 			$factores[] = $p;
 			$n = $n / $p;
 		} else {
@@ -35,7 +35,6 @@ $n = 600851475143;
 
 $factores = factores($n);
 rsort($factores);
-
 echo reset($factores) . "\n";
 
 
