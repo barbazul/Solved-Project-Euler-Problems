@@ -6,6 +6,8 @@
  * What is the largest prime factor of the number 600851475143 ?
  */
 
+$start = microtime(true);
+
 // Factorizo usando división por tentativa
 // http://es.wikipedia.org/wiki/Divisi%C3%B3n_por_tentativa
 
@@ -36,5 +38,4 @@ $n = 600851475143;
 $factores = factores($n);
 rsort($factores);
 echo reset($factores) . "\n";
-
-
+printf("Resultado obtenido en %.4f segundos\n", microtime(true) - $start);
