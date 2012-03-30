@@ -37,8 +37,15 @@ function eratostenes($n)
     return $primos;
 }
 
-// Probando repetidas veces conclui que el numero esta entre 100k y 105k
-$primos = eratostenes(105000); 
+// En base el teorema de los numeros primos
+// http://mathworld.wolfram.com/PrimeNumberTheorem.html
+// Para determinar una cota para el numero a encontrar se debe acotar n en:
+// 10001 ~ n / ln(n)
+// => 9051 < n / ln(n) < 10847
+// => 1.1e5 < n < 1.2e5
+// Tomo la cota superior, que me da todos los primos menores
+
+$primos = eratostenes(1.2e5); 
 //echo count($primos) . "\n";
 
 echo "$primos[10000]\n";
