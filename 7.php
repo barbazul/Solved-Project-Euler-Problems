@@ -7,7 +7,7 @@
  * What is the 10001st prime number?
  */
  
- $start = microtime(true);
+$start = microtime(true);
  
  // Usando la criba de Eratostenes 
  // http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
